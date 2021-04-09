@@ -49,6 +49,21 @@
     </div>
   </div>
 </nav>
+
+
+{% if  massages%}
+{% for massages in massages  %}
+
+
+<div class="alert alert-warning{{massages.tags}} alert-dismissible fade show" role="alert">
+  {{massages}}
+  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+{% endif %}
+
+
 {% block body %}{% endblock body %}
 
     <!-- Optional JavaScript; choose one of the two! -->
